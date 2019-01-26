@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/shards.js"></script>
+<link rel="stylesheet" href="css/nazo.css">
+
+<title>クイズ練習（複数）</title>
+</head>
+<body>
+<header>
+    <!-- <h1>クイズ練習（複数）</h1> -->
+</header>
+<main>
+<div class="w_box">
+  <p id="Q"></p>
+  <p id="answerQuestion">ここに問題が出題されます</p>
+
+  <div class="hyoujiBox">
+    <span id="a"></span>
+  </div>
+  <p id="mondaiBox">
+    <span id="score"></span>
+  </p>
+    <span id="next"></span>
+</div>
+</main>   
+</body>
+<script>
+const qs = [
+  "「さんかく」なのに「しかく」のものって何でしょう？",
+  "パソコンのキーボードが１箇所だけ壊れてしまい作業ができなくなった。さてキーボードのどこが壊れた？",
+  "次の３つの選択肢の中でいつも眠そうにしているのはどこの人？",
+  "服を二枚来ている人が痛がってる。どこが痛い？",
+  "「おひ〇くこ」〇に入るひらがなは３つのうちどれ",
+  "次の３つの選択肢の中でマラソンをして最初にゴールしたのは誰？",
+  ""
+];
+
+let i = 0;
+function dispalyAnswer(i){
+  $("#quest").html(qs[i]);
+  $("#Q").html("Q"+i);
+  $('#a').html(ans[i]);
+}
+displayAnswer(i);
+</script>
+</html>
